@@ -504,6 +504,116 @@ section {
 .tech-category:nth-child(5):hover { border-top: 4px solid #06b6d4; }
 .tech-category:nth-child(6):hover { border-top: 4px solid #3b82f6; }
 
+/* Certificates Section */
+.certificates {
+    background: white;
+    padding: 5rem 0;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.certificate-card {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 15px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.certificate-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: #3b82f6;
+}
+
+.certificate-card:hover .certificate-content h3 a {
+    text-decoration: underline;
+}
+
+.certificate-card:hover::before {
+    transform: scaleX(1);
+}
+
+.certificate-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.certificate-content h3 {
+    color: #1e3a8a;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.certificate-content h3 a {
+    color: #1e3a8a;
+    text-decoration: none;
+}
+
+.certificate-issuer {
+    color: #3b82f6;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.certificate-date {
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.certificate-description {
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.certificate-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background: #f1f5f9;
+    color: #1e3a8a;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
+}
+
 /* Achievements Section */
 .achievements {
     background: #f8fafc;
@@ -577,6 +687,10 @@ section {
 
 .contact-icon {
     font-size: 1.2rem;
+}
+
+.contact-map {
+    max-width: 100%;
 }
 
 .social-links {

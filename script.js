@@ -141,6 +141,17 @@ document.querySelectorAll('.tech-category').forEach(card => {
     });
 });
 
+// Certificate card hover effects
+document.querySelectorAll('.certificate-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-10px)';
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0)';
+    });
+});
+
 // Active navigation link highlighting
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-link');
